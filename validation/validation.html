@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+<style>
+.form{
+    width: 50%;
+    margin: 0 auto;
+    background: #ddd;
+    padding: 20px;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="form">
+<div class="form-group">
+<input type="text" class="form-control mt-2" placeholder="name" id="name" onkeyup="clearmsg('sp1')"><span style="color: red;" id="sp1"></span><br>
+<input type="number" class="form-control mt-2" placeholder="mobile number" id="mobile" onkeyup="clearmsg('sp2')"><span style="color: red;" id="sp2"></span><br>
+<input type="text" class="form-control mt-2" placeholder="place" id="place" onkeyup="clearmsg('sp3')"><span style="color: red;" id="sp3"></span><br>
+<input type="email" class="form-control mt-2" placeholder="email id" id="email" onkeyup="clearmsg('sp4')"><span style="color: red;" id="sp4"></span><br>
+<input type="email" class="form-control mt-2" placeholder="username" id="username" onkeyup="clearmsg('sp5')"><span style="color: red;" id="sp5"></span><br>
+<input type="password" class="form-control mt-2" placeholder="password" id="password" onkeyup="clearmsg('sp6')"><span style="color: red;" id="sp6"></span><br>
+<input type="file" class="form-control mt-2" name="photo"><br>
+<button onclick="return valid();return false;" name="submit" class="btn btn-primary">Submit</button>
+</div>
+    </form>
+</div>
+<form required>
+<script type="text/javascript">
+function valid(){
+var name = document.getElementById("name").value;
+var mobile = document.getElementById("mobile").value;
+var place = document.getElementById("place").value;
+var email = document.getElementById("email").value;
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+
+if(name==""){
+    document.getElementById("sp1").innerHTML="please enter your name";  
+    return false;
+}
+if(mobile==""){
+    document.getElementById("sp2").innerHTML="please enter mobile number";  
+    return false;
+}
+if(place==""){
+    document.getElementById("sp3").innerHTML="please enter place";  
+    return false;
+}
+if(email==""){
+    document.getElementById("sp4").innerHTML="please enter email";  
+    return false;
+}
+if(username==""){
+    document.getElementById("sp5").innerHTML="please enter username";  
+    return false;
+}
+if(password==""){
+    document.getElementById("sp6").innerHTML="please enter password";  
+    return false;
+}
+return true;
+}
+function clearmsg(sp){
+    document.getElementById(sp).innerHTML="";
+}
+
+
+</script>
+
+
+</body>
+</html>

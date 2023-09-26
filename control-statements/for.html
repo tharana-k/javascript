@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row" >
+           <div class="col-md-4" style="    margin: 0 auto;">
+               <input type="number" id="eve" placeholder="Enter limit" style="margin-top: 30px;"><br>
+               <button class="btn btn-primary" onclick="sum()" style="margin-top: 20px;">submit</button>
+           </div>
+        </div>  
+       </div>
+       <script>
+        function sum(){
+        let a = document.getElementById("eve").value
+        for(let i=0;i<=a;i=i+2){
+            document.write(i+"<br>");
+        }
+        }
+        
+        
+            </script>
+</body>
+</html>
